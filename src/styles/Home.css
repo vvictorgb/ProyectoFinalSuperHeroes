@@ -1,0 +1,80 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('https://example.com/superheroes-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    max-width: 800px;
+  }
+  
+  .home-title {
+    font-size: 3.5rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .home-description {
+    font-size: 1.5rem;
+    color: #ddd;
+    margin-bottom: 30px;
+  }
+  
+  .home-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #c13500;
+  }
+  
+  .info-section, .popular-heroes, .hero-facts {
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    color: white;
+  }
+  
+  .info-section h2, .popular-heroes h2, .hero-facts h2 {
+    color: #ffcc00;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .popular-heroes ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .popular-heroes li {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .hero-facts p {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
