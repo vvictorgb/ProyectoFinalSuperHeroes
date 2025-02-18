@@ -1,80 +1,244 @@
-.home-container {
-    display: flex;
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: url('../Captura\ de\ pantalla\ de\ 2025-02-18\ 17-24-31.png') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-attachment: fixed;
+}
+
+.overlay {
+  background-color: rgb(255, 252, 252,0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-title {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.home-description {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.home-button {
+  padding: 12px 30px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #2980b9;
+}
+
+/* Featured Heroes */
+.featured-heroes {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ecf0f1;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.hero-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.hero-card p {
+  padding: 0 15px 20px;
+  color: #7f8c8d;
+}
+
+.hero-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Superheroes */
+.about-heroes {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about-heroes p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+/* Fun Facts */
+.fun-facts {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.fun-facts h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.fun-facts ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.fun-facts li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.fun-facts li strong {
+  color: #3498db;
+}
+
+.fun-facts ul li:hover {
+  color: #2980b9;
+  cursor: pointer;
+}
+
+/* Call to Action Section */
+.cta-section {
+  background-color: #3498db;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.cta-button {
+  padding: 12px 40px;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #d35400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 30px;
+  }
+
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+    max-width: 400px;
+  }
+
+  .hero-cards {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-image: url('https://example.com/superheroes-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 20px;
   }
-  
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    border-radius: 10px;
-    color: white;
-    max-width: 800px;
-  }
-  
-  .home-title {
-    font-size: 3.5rem;
-    color: #ffcc00;
+
+  .hero-card {
+    width: 90%;
     margin-bottom: 20px;
   }
-  
-  .home-description {
-    font-size: 1.5rem;
-    color: #ddd;
-    margin-bottom: 30px;
-  }
-  
-  .home-button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: white;
-    background-color: #ff4500;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .home-button:hover {
-    background-color: #c13500;
-  }
-  
-  .info-section, .popular-heroes, .hero-facts {
-    margin-top: 50px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 900px;
-    text-align: center;
-    color: white;
-  }
-  
-  .info-section h2, .popular-heroes h2, .hero-facts h2 {
-    color: #ffcc00;
+
+  .cta-title {
     font-size: 2rem;
-    margin-bottom: 10px;
   }
-  
-  .popular-heroes ul {
-    list-style: none;
-    padding: 0;
+
+  .cta-button {
+    font-size: 1rem;
   }
-  
-  .popular-heroes li {
-    font-size: 1.5rem;
-    margin: 10px 0;
-  }
-  
-  .hero-facts p {
-    font-size: 1.2rem;
-    font-style: italic;
-  }
-  
+}
