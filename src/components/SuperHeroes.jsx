@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import '../styles/SuperHeroes.css';
 
-const API_KEY = 'cb68b1697de19709679ba397a6b78d3a'; // Tu clave de API
+const API_KEY = 'cb68b1697de19709679ba397a6b78d3a'; 
 
-// Definir los 100 héroes con sus IDs o nombres.
+
 const heroesIds = [
   644, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
   11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 
