@@ -1,0 +1,204 @@
+.arena-container {
+  text-align: center;
+  padding: 30px;
+  background: url('../Captura\ de\ pantalla\ de\ 2025-02-19\ 12-38-10.png') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.arena-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.battle-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.team {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+  color: white; 
+}
+
+.team h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.cards-grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+.hero-card2 {
+  height: 250px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hero-card2:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0px 10px 30px rgba(255, 215, 0, 0.6); 
+}
+
+.hero-image2, .villain img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-image2:hover, .villain img:hover {
+  transform: scale(1.1); 
+}
+
+.hero-name2, .villain h3 {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.hero-card2:hover .hero-name2, .villain:hover h3 {
+  color: #ffcc00; 
+}
+
+.villain {
+  border: 3px solid red; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.villain:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0px 10px 30px rgba(255, 0, 0, 0.6); 
+}
+
+.vs-section {
+  flex: 0.3;
+  text-align: center;
+}
+
+.vs-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: red;
+  text-shadow: 3px 3px 10px black;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.fight-button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff0000, #ff7300);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.7);
+}
+
+.fight-button:hover {
+  background: linear-gradient(45deg, #ff7300, #ff0000);
+  transform: scale(1.1);
+}
+
+.battle-result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 50px;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+  width: 80%;
+  max-width: 1000px;
+}
+
+.victoria {
+  background: linear-gradient(45deg, #28a745, #85e085);
+  color: white;
+}
+
+.derrota {
+  background: linear-gradient(45deg, #dc3545, #ff4d4d);
+  color: white;
+}
+
+.retry-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #ffcc00;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.retry-button:hover {
+  background: #ffaa00;
+  transform: scale(1.1);
+}
+
+.back-button {
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background: red;
+}
+
+
+
+.team:nth-child(1) {
+  border: 3px solid green; 
+
+}
+
+.team:nth-child(3) {
+border: 3px solid red;
+
+}
+.team:nth-child(3) h2{
+  color: #ff0000;
+}
+.team:nth-child(1) h2{
+  color: green;
+}

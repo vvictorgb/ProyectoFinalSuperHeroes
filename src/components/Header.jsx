@@ -16,6 +16,8 @@ const Header = () => {
             <nav>
                 <Link to="/" className="navLink">Inicio</Link>
                 <Link to="/superheroes" className="navLink">Superhéroes</Link>
+                <Link to="/MiMazo" className="navLink">Mi Mazo</Link>
+                <Link to="/Arena" className="navLink">Arena</Link>
             </nav>
 
             {isAuthenticated ? (
