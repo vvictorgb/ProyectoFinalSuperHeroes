@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/ArenaDeBatalla.css';
+import axios from 'axios';
 
 const API_KEY = 'cb68b1697de19709679ba397a6b78d3a';
 
-const villanosIds = [423, 399, 303, 307, 423, 298];
+const villanosIds = [263, 332, 346, 149, 423, 659];
 
 const ArenaDeBatalla = () => {
   const [miMazo, setMiMazo] = useState([]);
@@ -19,13 +20,20 @@ const ArenaDeBatalla = () => {
 
   useEffect(() => {
     const fetchVillanos = async () => {
-      const promises = villanosIds.map(id =>
-        fetch(`https://superheroapi.com/api.php/${API_KEY}/${id}`)
-          .then(response => response.json())
-          .catch(error => console.error('Error al obtener villanos:', error))
-      );
-      const data = await Promise.all(promises);
-      setVillanos(data);
+      try {
+        const promises = villanosIds.map(id => 
+          axios.get(`https://superheroapi.com/api.php/${API_KEY}/${id}`)
+            .then(response => response.data)
+            .catch(error => {
+              console.error('Error al obtener villanos:', error);
+              return null;
+            })
+        );
+        const data = await Promise.all(promises);
+        setVillanos(data.filter(villain => villain && villain.image));
+      } catch (error) {
+        console.error('Error al obtener villanos:', error);
+      }
     };
 
     fetchVillanos();
@@ -46,7 +54,7 @@ const ArenaDeBatalla = () => {
 
   const volverIntentar = () => {
     setResultado(null);
-    setPeleando(false);  // Restablece el estado de pelea
+    setPeleando(false);
   };
 
   return (

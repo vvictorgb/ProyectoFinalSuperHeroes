@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/SuperHeroes.css';
+import axios from 'axios';
 
 const API_KEY = 'cb68b1697de19709679ba397a6b78d3a';
 
@@ -14,7 +15,7 @@ const heroesIds = [
   61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 
   71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 
   81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 
-  91, 92, 93, 94, 95, 96, 97, 98, 99, 100
+  91, 92, 93, 94, 95, 96, 97, 98, 99, 100,659
 ];
 
 const SuperHeroes = () => {
@@ -26,8 +27,8 @@ const SuperHeroes = () => {
     const getFixedHeroes = async () => {
       try {
         const heroPromises = heroesIds.map(id => 
-          fetch(`https://superheroapi.com/api.php/${API_KEY}/${id}`)
-            .then(response => response.json())
+          axios.get(`https://superheroapi.com/api.php/${API_KEY}/${id}`)
+            .then(response => response.data)
             .catch(error => {
               console.error('Error fetching superhero:', error);
               return null;
@@ -58,7 +59,6 @@ const SuperHeroes = () => {
       localStorage.setItem('miMazo', JSON.stringify(mazo));
     }
 
-    // Redirige siempre a la página de miMazo
     navigate('/miMazo');
   };
 

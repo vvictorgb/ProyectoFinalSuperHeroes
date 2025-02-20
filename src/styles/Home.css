@@ -31,7 +31,7 @@ a {
   align-items: center;
   text-align: center;
   color: white;
-  background-attachment: fixed;
+ 
 }
 
 .overlay {
@@ -147,7 +147,7 @@ a {
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
+
 }
 
 .fun-facts h3 {
@@ -241,4 +241,26 @@ a {
   .cta-button {
     font-size: 1rem;
   }
+}
+
+.hero-cards div:nth-child(1){
+  background-image: url("../Spiderman.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+.hero-cards div:nth-child(2){
+  background-image: url("../Batman.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+.hero-cards div:nth-child(3){
+  background-image: url("../Superman.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 }

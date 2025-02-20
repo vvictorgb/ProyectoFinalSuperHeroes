@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="home-container">
       
-      {/* Hero Section */}
+   
       <section className="hero-section">
         <div className="overlay">
           <h1 className="home-title">Bienvenido al Universo de Superhéroes</h1>
@@ -18,29 +18,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Heroes */}
+    
       <section className="featured-heroes">
         <h2 className="section-title">Superhéroes Destacados</h2>
         <div className="hero-cards">
           <div className="hero-card">
-            <img src="https://example.com/spiderman.jpg" alt="Spider-Man" />
-            <h3>Spider-Man</h3>
-            <p>El hombre araña, luchador contra el crimen y protector de Nueva York.</p>
+           
+           
           </div>
           <div className="hero-card">
-            <img src="https://example.com/batman.jpg" alt="Batman" />
-            <h3>Batman</h3>
-            <p>El caballero oscuro que defiende Gotham City.</p>
+          
+
           </div>
           <div className="hero-card">
-            <img src="https://example.com/superman.jpg" alt="Superman" />
-            <h3>Superman</h3>
-            <p>El hombre de acero, defensor de la justicia y la verdad.</p>
+
           </div>
         </div>
       </section>
 
-      {/* About Superheroes */}
+    
       <section className="about-heroes">
         <h2 className="section-title">¿Quiénes son los Superhéroes?</h2>
         <p>
@@ -49,7 +45,7 @@ const Home = () => {
         </p>
       </section>
 
-      {/* Fun Facts */}
+  
       <section className="fun-facts">
         <h2 className="section-title">Datos Curiosos</h2>
         <ul>
@@ -59,7 +55,7 @@ const Home = () => {
         </ul>
       </section>
 
-      {/* Call to Action Section */}
+
       <section className="cta-section">
         <h2 className="cta-title">¡Únete a la Lucha!</h2>
         <p>Si eres fanático de los superhéroes, no puedes perderte la oportunidad de unirte a nuestras aventuras épicas.</p>
