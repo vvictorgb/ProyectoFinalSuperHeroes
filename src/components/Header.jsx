@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from "./LoginButton";
+
 import '../styles/Header.css';
 
 const Header = () => {
@@ -20,11 +20,11 @@ const Header = () => {
                 <Link to="/Arena" className="navLink">Arena</Link>
             </nav>
 
-            {isAuthenticated ? (
+           
                 <button className="btnLogout" onClick={() => logout()}>LOGOUT</button>
-            ) : (
-                <LoginButton />
-            )}
+         
+            
+        
         </header>
     );
 };
